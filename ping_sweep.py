@@ -7,9 +7,9 @@ en1 = int(raw_input("Enter Ending Number "))
 
 oper = platform.system()
 if (oper == 'Windows'):
-	ping = 'ping -n 1'
+	ping = 'ping -n 1 '
 else:
-	ping = 'ping -c 1'
+	ping = 'ping -c 1 '
 
 t1 = datetime.now()
 for ip in range(st1, (en1+1)):
