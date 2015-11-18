@@ -16,11 +16,12 @@ for ip in range(st1, (en1+1)):
 	addr = net+'.'+str(ip)
 	comm = ping + addr
 	response = os.popen(comm)
-	for line in response.readline():
+	for line in response.readlines():
 		if (line.count('TTL')):
+			print "Found it"
 			break
-		if (line.count('TTL')):
-			print addr, "----> LIVE"
+	if (line.count('TTL')):
+		print addr, "----> LIVE"
 
 t2 = datetime.now()
 total = t2 - t1
