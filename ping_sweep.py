@@ -8,8 +8,10 @@ en1 = int(raw_input("Enter Ending Number "))
 oper = platform.system()
 if (oper == 'Windows'):
 	ping = 'ping -n 1 '
+	comp = 'TTL'
 else:
 	ping = 'ping -c 1 '
+	comp = 'ttl'
 
 t1 = datetime.now()
 for ip in range(st1, (en1+1)):
@@ -17,10 +19,9 @@ for ip in range(st1, (en1+1)):
 	comm = ping + addr
 	response = os.popen(comm)
 	for line in response.readlines():
-		if (line.count('TTL')):
-			print "Found it"
+		if (line.count(comp)):
 			break
-	if (line.count('TTL')):
+	if (line.count(comp)):
 		print addr, "----> LIVE"
 
 t2 = datetime.now()
