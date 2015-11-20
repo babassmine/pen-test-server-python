@@ -27,6 +27,3 @@ for ip in range(st1, (en1+1)):
 t2 = datetime.now()
 total = t2 - t1
 print "Scanning complete in ", total
-	
-	
-
