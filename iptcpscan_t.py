@@ -52,12 +52,12 @@ try:
 		en = st1 + tn
 		if (en > en1):
 			en = en1
-		thread = myThread(st1, en1)
+		thread = myThread(st1, en)
 		thread.start()
 		threads.append(thread)
 		st1 = en
-except:
-	print "Error: unable to start thread"
+except: socket.error
+	print "Error: unable to start thread "+ exception 
 
 print "\t Number of Threads active:", threading.activeCount()
 for t in threads:
@@ -70,4 +70,5 @@ for key in dict:
 	print dict[key], "----> Live"
 
 t2 = datetime.now()
+total = t2 - t1
 print "scanning complete in ", total
