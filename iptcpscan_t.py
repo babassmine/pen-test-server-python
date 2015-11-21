@@ -17,6 +17,7 @@ t1 = datetime.now()
 '''section 2'''
 class myThread(threading.Thread):
 	def __init__(self, st, en):
+		threading.Thread.__init__(self)
 		self.st = st
 		self.en = en
 
@@ -56,8 +57,8 @@ try:
 		thread.start()
 		threads.append(thread)
 		st1 = en
-except: socket.error
-	print "Error: unable to start thread "+ exception 
+except:
+	print "Error: unable to start thread "
 
 print "\t Number of Threads active:", threading.activeCount()
 for t in threads:
