@@ -28,7 +28,7 @@ class myThread(threading.Thread):
 def scan(addr):
 	sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 	socket.setdefaulttimeout(1)
-	result = sock.connect_ex((addr, 135))
+	result = sock.connect_ex((addr, 80))
 	if result==0:
 		sock.close()
 		return 1
