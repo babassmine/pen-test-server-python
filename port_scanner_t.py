@@ -114,7 +114,7 @@ except:
 
 print "\t Number of Threads active:", threading.activeCount()
 
-for t in theads:
+for t in threads:
 	t.join()
 print "Exiting Main Thread"
 t2 = datetime.now()
