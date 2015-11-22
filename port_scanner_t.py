@@ -53,3 +53,71 @@ def scantcp(threadName, rmip, r1, r2, c):
 
 print "*"*40
 print "\t Welcome this is the Port Scanner of Abass"
+
+d = raw_input("\tPress D for Domain Name or Press for IP Address\t")
+if (d=='D' or d=='d'):
+	rmserver = raw_input("\tEnter the Domain Name to scann:\t")
+	rmip = socket.gethostbyname(rmserver)
+elif (d=='I' or d =='I'):
+	rmip = raw_input("\tEnter the IP Address to scan: ")
+
+else:
+	print "Wrong input"
+
+r11 = int(raw_input("\t Enter the start port number\t"))
+r21 = int(raw_input("\t Enter the last port number\t"))
+
+conect = raw_input("For low connectivity press L and High connectivity
+PressH\t")
+
+if (conect == 'L' or conect == 'l'):
+	c = 1.5
+elif (conect == 'h' or conect == 'H'):
+	c = 0.5
+
+else:
+	print "Wrong Input"
+
+print "\Abass' Scanner is working on ", rmip
+print "*"*60
+t1 = datetime.now()
+tp = r21 - r11
+
+tn = 30
+tnum = tp/n
+
+if (tp%tn != 0):
+	tnum = tnum + 1
+
+if (tnum > 200):
+	tn = tp/300
+	tn = tn + 1
+	tnum = tp / tn
+
+	if (tp%th ! =0 ):
+		tnum = tnum + 1
+
+'''section 5'''
+threads = []
+
+try:
+	for i in range(tnum)
+		k=i
+		r2=r11+tn
+		thread = myThread('T1', rmip, r11,r2, c)
+		thread.start()
+	threads.append(thread)
+	r11 = r2
+except:
+	print "Error: unable to start thread"
+
+
+print "\t Number of Threads active:", threading.activeCount()
+
+for t in theads:
+	t.join()
+print "Exiting Main Thread"
+t2 = datetime.now()
+
+total = t2 - t1
+print "scanning completed in ", total
