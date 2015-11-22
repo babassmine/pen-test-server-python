@@ -102,11 +102,11 @@ try:
 	for i in range(tnum):
 		k=i
 		r2=r11+tn
-		# print 'remote ip', rmip, r11,r2, c
+		print 'remote ip', rmip, r11,r2, c
 		thread = myThread('T1', rmip, r11,r2, c)
 		thread.start()
-	threads.append(thread)
-	r11 = r2
+		threads.append(thread)
+		r11 = r2
 except:
 	print "Error: unable to start thread"
 
