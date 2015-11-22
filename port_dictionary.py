@@ -25,10 +25,11 @@ def list1():
 	print "*"*30
 	shelf = shelve.open('abass.raj', writeback=True)
 	data = (shelf['desc'])
-for key, value in data.items():
-	print key, ':', value
-	print '*'*30
-	print "\tProgram to Update or Add and Delete the port number detail\n"
+	for key, value in data.items():
+		print key, ':', value
+		print '*'*30
+
+print "\tProgram to Update or Add and Delete the port number detail\n"
 while(1):
 	print "Press"
 	print "C for create inly one time create"
