@@ -37,17 +37,17 @@ while(1):
 	print "E for exit "
 	c = raw_input("Enter : ")
 
-if (c=='C' or c=='c'):
-	create()
-elif (c=='U' or c=='u'):
-	update()
-elif(c=='D' or c=='d'):
-	del1()
-elif(c=='L' or c=='l'):
-	list1()
-elif(c=='E' or c=='e'):
-	exit()
-else:
-	print "\tWrong Input"
+	if (c=='C' or c=='c'):
+		create()
+	elif (c=='U' or c=='u'):
+		update()
+	elif(c=='D' or c=='d'):
+		del1()
+	elif(c=='L' or c=='l'):
+		list1()
+	elif(c=='E' or c=='e'):
+		exit()
+	else:
+		print "\tWrong Input"
 
 
