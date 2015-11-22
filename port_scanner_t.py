@@ -54,6 +54,7 @@ def scantcp(threadName, rmip, r1, r2, c):
 print "*"*40
 print "\t Welcome this is the Port Scanner of Abass"
 
+rmip = ''
 d = raw_input("\tPress D for Domain Name or Press for IP Address\t")
 if (d=='D' or d=='d'):
 	rmserver = raw_input("\tEnter the Domain Name to scann:\t")
@@ -83,7 +84,7 @@ t1 = datetime.now()
 tp = r21 - r11
 
 tn = 30
-tnum = tp/n
+tnum = tp/tn
 
 if (tp%tn != 0):
 	tnum = tnum + 1
