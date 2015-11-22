@@ -87,12 +87,12 @@ tnum = tp/tn
 if (tp%tn != 0):
 	tnum = tnum + 1
 
-if (tnum > 200):
+if (tnum > 300):
 	tn = tp/300
 	tn = tn + 1
 	tnum = tp / tn
 
-	if (tp%th !=0 ):
+	if (tp%tn !=0 ):
 		tnum = tnum + 1
 
 '''section 5'''
@@ -120,3 +120,5 @@ t2 = datetime.now()
 
 total = t2 - t1
 print "scanning completed in ", total
+sys.exit()
+
