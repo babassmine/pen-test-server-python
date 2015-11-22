@@ -67,8 +67,7 @@ else:
 r11 = int(raw_input("\t Enter the start port number\t"))
 r21 = int(raw_input("\t Enter the last port number\t"))
 
-conect = raw_input("For low connectivity press L and High connectivity
-PressH\t")
+conect = raw_input("For low connectivity press L and High connectivity PressH\t")
 
 if (conect == 'L' or conect == 'l'):
 	c = 1.5
@@ -94,14 +93,14 @@ if (tnum > 200):
 	tn = tn + 1
 	tnum = tp / tn
 
-	if (tp%th ! =0 ):
+	if (tp%th !=0 ):
 		tnum = tnum + 1
 
 '''section 5'''
 threads = []
 
 try:
-	for i in range(tnum)
+	for i in range(tnum):
 		k=i
 		r2=r11+tn
 		thread = myThread('T1', rmip, r11,r2, c)
