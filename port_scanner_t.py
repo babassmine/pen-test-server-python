@@ -12,7 +12,7 @@ data = (shelf['desc'])
 
 '''section 2'''
 class myThread(threading.Thread):
-	def __init(self, rmip, r1, r2, c):
+	def __init__(self, threadName, rmip, r1, r2, c):
 		threading.Thread.__init__(self)
 		self.threadName = threadName
 		self.rmip = rmip
@@ -54,14 +54,12 @@ def scantcp(threadName, rmip, r1, r2, c):
 print "*"*40
 print "\t Welcome this is the Port Scanner of Abass"
 
-rmip = ''
-d = raw_input("\tPress D for Domain Name or Press for IP Address\t")
+d = raw_input("\tPress D for Domain Name or Press I for IP Address\t")
 if (d=='D' or d=='d'):
 	rmserver = raw_input("\tEnter the Domain Name to scann:\t")
 	rmip = socket.gethostbyname(rmserver)
 elif (d=='I' or d =='I'):
 	rmip = raw_input("\tEnter the IP Address to scan: ")
-
 else:
 	print "Wrong input"
 
@@ -78,7 +76,7 @@ elif (conect == 'h' or conect == 'H'):
 else:
 	print "Wrong Input"
 
-print "\Abass' Scanner is working on ", rmip
+print "\tAbass' Scanner is working on ", rmip
 print "*"*60
 t1 = datetime.now()
 tp = r21 - r11
@@ -104,6 +102,7 @@ try:
 	for i in range(tnum):
 		k=i
 		r2=r11+tn
+		# print 'remote ip', rmip, r11,r2, c
 		thread = myThread('T1', rmip, r11,r2, c)
 		thread.start()
 	threads.append(thread)
