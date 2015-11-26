@@ -1,5 +1,4 @@
 import socket
-
 def get_portnumber(prefix):
 	return dict( (getattr(socket, a), a)
 		for a in dir(socket)
