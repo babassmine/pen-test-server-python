@@ -10,7 +10,7 @@ while True:
 	print "-------------Ethernet Frame---------------"
 	print "Destination mac", binascii.hexlify(eth[0])
 	print "Source mac", binascii.hexlify(eth[1])
-	binascii/hexlify(eth[2])
+	binascii.hexlify(eth[2])
 
 	ipheader = pkt[0][14:34]
 
