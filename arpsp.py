@@ -2,7 +2,7 @@ import socket
 import struct
 import binascii
 
-s = scoket.socket(socket.PF_PACKET, socket.SOCK_RAW, socket.ntohs(0x0800))
+s = socket.socket(socket.PF_PACKET, socket.SOCK_RAW, socket.ntohs(0x0800))
 s.bind(('eth0', socket.htons(0x0800)))
 
 sor = '\x00\x0c\x29\x4f\x8e\x35'
